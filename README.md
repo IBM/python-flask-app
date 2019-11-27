@@ -14,15 +14,17 @@
 </p>
 
 
-# Create and deploy a Python Flask web application
+# Create and deploy a Python Flask cloud application
 
 > We have similar applications available for [Django](https://github.com/IBM/django-web-app), [Go](https://github.com/IBM/go-web-app), [Java Liberty](https://github.com/IBM/java-liberty-web-app), [Swift](https://github.com/IBM/swift-web-app), [Spring](https://github.com/IBM/spring-web-app), and [Node](https://github.com/IBM/nodejs-web-app).
 
-In this sample web application, you will create a Python web application using Flask. This application contains an opinionated set of files for web serving:
+In this sample application, you will create a Python cloud application using Flask. This application contains an opinionated set of files for web serving:
 
 - `public/index.html`
 - `public/404.html`
 - `public/500.html`
+
+This application also enables a starting place for a Python microservice using Flask. A microservice is an individual component of an application that follows the **microservice architecture** - an architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities. The microservice exposes a RESTful API matching a [Swagger](http://swagger.io) definition.
 
 ## Steps
 
@@ -70,6 +72,8 @@ There are also a few utility commands:
 * `test`: runs all unit tests inside of the project's `test` directory
 
 Your application is running at: `http://localhost:3000/` in your browser.
+- Your [Swagger UI](http://swagger.io/swagger-ui/) is running on: `/explorer`
+- Your Swagger definition is running on: `/swagger/api`
 - Health endpoint: `/health`
 
 There are two different options for debugging a Flask project:
