@@ -2,7 +2,7 @@ swagger: '2.0'
 
 info:
   version: "0.0.1"
-  title: flaskmicroservice API
+  title: Python Flask REST API
 
 consumes:
   - text/plain
