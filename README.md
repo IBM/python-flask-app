@@ -14,7 +14,7 @@
 </p>
 
 
-# Create and deploy a Python Flask cloud application 
+# Create and deploy a Python Flask cloud application
 
 > We have similar applications available for [Django](https://github.com/IBM/django-web-app), [Go](https://github.com/IBM/go-web-app), [Java Liberty](https://github.com/IBM/java-liberty-web-app), [Swift](https://github.com/IBM/swift-web-app), [Spring](https://github.com/IBM/spring-web-app), and [Node](https://github.com/IBM/nodejs-web-app).
 
