@@ -16,7 +16,7 @@
 
 # Create and deploy a Python Flask cloud application
 
-> We have similar applications available for [Django](https://github.com/IBM/django-web-app), [Go](https://github.com/IBM/go-web-app), [Java Liberty](https://github.com/IBM/java-liberty-web-app), [Swift](https://github.com/IBM/swift-web-app), [Spring](https://github.com/IBM/spring-web-app), and [Node](https://github.com/IBM/nodejs-web-app).
+> We have similar applications available for [Node.js](https://github.com/IBM/node-express-app), [Go](https://github.com/IBM/go-gin-app), [Java Spring](https://github.com/IBM/java-spring-app), [Python Django](https://github.com/IBM/python-django-app), [Swift](https://github.com/IBM/swift-kitura-app), and [Java Liberty](https://github.com/IBM/java-liberty-app).
 
 In this sample application, you will create a Python cloud application using Flask. This application contains an opinionated set of files for web serving:
 
@@ -33,7 +33,7 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
 ### Deploying to IBM Cloud
 
 <p align="center">
-    <a href="https://cloud.ibm.com/developer/appservice/create-app?starterKit=b5fab23f-1b6b-37bc-8736-c90dc6973a0c">
+    <a href="https://cloud.ibm.com/developer/appservice/starter-kits/af722f25-5ab9-3616-9cf8-6fce9e685eee/python-flask-app">
     <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
     </a>
 </p>
