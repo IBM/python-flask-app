@@ -52,7 +52,7 @@ To get started building this application locally, you can either run the applica
 Running Flask applications has been simplified with a `manage.py` file to avoid dealing with configuring environment variables to run your app. From your project root, you can download the project dependencies with:
 
 ```bash
-pip install -r requirements.txt
+pipenv install --system --deploy --ignore-pipfile
 ```
 
 To run your application locally:
