@@ -1,16 +1,16 @@
 [[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
+
+url = "https://pypi.python.org/simple"
 verify_ssl = true
+name = "pypi"
+
 
 [dev-packages]
 
-[packages]
-gunicorn = "==19.7.1"
-ibmcloudenv = "*"
-livereload = "*"
-Flask = ">=1.0.0"
-prometheus_client = "*"
 
-[requires]
-python_version = ">=3"
+[packages]
+livereload ='*'
+ibmcloudenv ='~=0.0'
+flask = ">=1.0.0"
+gunicorn = "==19.7.1"
+prometheus-client = "*"

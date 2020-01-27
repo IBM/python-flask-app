@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/python-36
 
 WORKDIR /app
 
-COPY Pipfile* /app/
+COPY requirements.txt /tmp/requirements.txt
 
 ## NOTE - rhel enforces user container permissions stronger ##
 USER root
@@ -10,7 +10,7 @@ RUN yum install python3-pip wget
 
 RUN pip install --upgrade pip \
   && pip install --upgrade pipenv\
-  && pipenv install --system --deploy --ignore-pipfile
+  && pip install --upgrade -r /tmp/requirements.txt
 
 USER 1001
 
