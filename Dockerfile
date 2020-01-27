@@ -10,7 +10,7 @@ RUN yum install python3-pip wget
 
 RUN pip install --upgrade pip \
   && pip install --upgrade pipenv\
-  && pipenv install --system --deploy --ignore-pipfile
+  && pipenv install --system --deploy
 
 USER 1001
 
