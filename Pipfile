@@ -13,4 +13,11 @@ livereload ='*'
 ibmcloudenv ='~=0.0'
 flask = ">=1.0.0"
 gunicorn = "==19.7.1"
+<<<<<<< HEAD
 prometheus-client = "*"
+=======
+ibmcloudenv = "*"
+livereload = "*"
+Flask = ">=1.0.0"
+prometheus_client = "*"
+>>>>>>> stage1

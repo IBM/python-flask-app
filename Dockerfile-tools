@@ -12,7 +12,12 @@ RUN yum -y install --disableplugin=subscription-manager python36 \
 RUN yum -y install --disableplugin=subscription-manager python3-pip wget \
   && yum --disableplugin=subscription-manager clean all
 
+<<<<<<< HEAD
 RUN pip3 install --upgrade -r /tmp/requirements.txt
+=======
+RUN pip3 install pipenv
+RUN pipenv install
+>>>>>>> stage1
 
 # Update python command to point to python3 install
 RUN alternatives --set python /usr/bin/python3
