@@ -11,6 +11,3 @@ ibmcloudenv = "*"
 livereload = "*"
 Flask = ">=1.0.0"
 prometheus_client = "*"
-
-[requires]
-python_version = ">=3"
