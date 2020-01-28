@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi8/ubi
 
 WORKDIR /app
 
-COPY requirements.txt /tmp/requirements.txt
+COPY Pipfile* /app/
 
 # Install python3
 RUN yum -y install --disableplugin=subscription-manager python36 \
@@ -12,7 +12,8 @@ RUN yum -y install --disableplugin=subscription-manager python36 \
 RUN yum -y install --disableplugin=subscription-manager python3-pip wget \
   && yum --disableplugin=subscription-manager clean all
 
-RUN pip3 install --upgrade -r /tmp/requirements.txt
+RUN pip3 install pipenv
+RUN pipenv install
 
 # Update python command to point to python3 install
 RUN alternatives --set python /usr/bin/python3
