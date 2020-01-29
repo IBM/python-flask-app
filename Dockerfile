@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/python-36
 
 WORKDIR /app
 
-COPY requirements.txt /tmp/requirements.txt
+COPY Pipfile* /app/
 
 ## NOTE - rhel enforces user container permissions stronger ##
 USER root
