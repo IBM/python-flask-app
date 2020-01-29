@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi8/ubi
 
 WORKDIR /app
 
-COPY Pipfile* /app/
+COPY requirements.txt /tmp/requirements.txt
 
 # Install python3
 RUN yum -y install --disableplugin=subscription-manager python36 \
