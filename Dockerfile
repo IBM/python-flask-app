@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/python-36
+FROM registry.access.redhat.com/ubi8
 
 WORKDIR /app
 
@@ -6,10 +6,11 @@ COPY Pipfile* /app/
 
 ## NOTE - rhel enforces user container permissions stronger ##
 USER root
-RUN yum install python3-pip wget
+RUN yum -y install python3
+RUN yum -y install python3-pip wget
 
-RUN pip install --upgrade pip \
-  && pip install --upgrade pipenv\
+RUN pip3 install --upgrade pip \
+  && pip3 install --upgrade pipenv \
   && pipenv install --system --deploy
 
 USER 1001
