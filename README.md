@@ -80,9 +80,9 @@ There are two different options for debugging a Flask project:
 1. Run `python manage.py runserver` to start a native Flask development server. This comes with the Werkzeug stack-trace debugger, which will present runtime failure stack-traces in-browser with the ability to inspect objects at any point in the trace. For more information, see [Werkzeug documentation](http://werkzeug.pocoo.org/).
 2. Run `python manage.py debug` to run a Flask development server with debug exposed, but the native debugger/reloader turned off. This grants access for an IDE to attach itself to the process (i.e. in PyCharm, use `Run` -> `Attach to Local Process`).
 
-You can also verify the state of your locally running application using the Selenium UI test script included in the scripts/ directory.
+You can also verify the state of your locally running application using the Selenium UI test script included in the `scripts` directory.
 
-Note for Windows users: `gunicorn` is not supported on Windows. You may start the server with `python manage.py run` on your local machine or build and start the Dockerfile.
+> **Note for Windows users:** `gunicorn` is not supported on Windows. You may start the server with `python manage.py run` on your local machine or build and start the Dockerfile.
 
 #### IBM Cloud Developer Tools
 
