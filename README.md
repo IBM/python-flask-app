@@ -28,7 +28,7 @@ This application also enables a starting place for a Python microservice using F
 
 ## Steps
 
-You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/python-flask-app) or [build it locally](#building-locally) by cloning this repo first. Once your app is live, you can access the `/health` endpoint to build out your cloud native application.
+You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/python-flask-app) or [build it locally](#building-locally) by cloning this repo first. After your app is live, you can access the `/health` endpoint to build out your cloud native application.
 
 ### Deploying to IBM Cloud
 
@@ -38,14 +38,15 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
     </a>
 </p>
 
-Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted GitLab project and DevOps toolchain. You will have the option of deploying to either Cloud Foundry or a Kubernetes cluster. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud. 
+Click **Deploy to IBM Cloud** to deploy this same application to IBM Cloud. This option creates a deployment pipeline, complete with a hosted GitLab project and a DevOps toolchain. You can deploy your app to Cloud Foundry, a Kubernetes cluster, or a Red Hat OpenShift cluster. OpenShift is available only through a standard cluster, which requires you to have a billable account.
 
+[IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud.
 
-### Building Locally
+### Building locally
 
 To get started building this application locally, you can either run the application natively or use the [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) for containerization and easy deployment to IBM Cloud.
 
-#### Native Application Development
+#### Native application development
 
 * Install [Python](https://www.python.org/downloads/)
  
@@ -120,7 +121,7 @@ ibmcloud dev build --debug
 ibmcloud dev debug
 ```
 
-## Next Steps
+## Next steps
 * Learn more about the services and capabilities of [IBM Cloud](https://cloud.ibm.com).
 * Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
