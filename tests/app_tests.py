@@ -18,7 +18,7 @@ class ServerTestCase(unittest.TestCase):
 
     def test_health_endpoint(self):
         result = self.app.get('/health')
-        self.assertTrue(str('UP') in result.data)
+        self.assertTrue(b('UP') in result.data)
 
 
 if __name__ == '__main__':
