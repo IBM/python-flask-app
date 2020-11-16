@@ -9,5 +9,5 @@ verify_ssl = true
 gunicorn = "==19.7.1"
 ibmcloudenv = "*"
 livereload = "*"
-Flask = ">=1.0.0"
+flask = ">=1.0.0"
 prometheus_client = "*"
