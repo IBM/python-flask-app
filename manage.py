@@ -1,4 +1,4 @@
-import os, sys, argparse, subprocess, signal, shlex
+import os, sys, argparse, subprocess, signal
 
 # Project defaults
 FLASK_APP = 'server/__init__.py'
@@ -17,7 +17,7 @@ class Command:
         env = os.environ
         env.update(conf)
         env.update(self.env)
-        subprocess.call(shlex.split(cmd), env=env, shell=True)
+        subprocess.call(cmd, env=env)
 
 
 class CommandManager:
@@ -51,12 +51,12 @@ cm = CommandManager()
 cm.add(Command(
     "build",
     "compiles python files in project into .pyc binaries",
-    lambda c: 'python -m compileall .'))
+    lambda c: ['python', '-m', 'compileall', '.']))
 
 cm.add(Command(
     "start",
     "runs server with gunicorn in a production setting",
-    lambda c: 'gunicorn -b {0}:{1} server:app'.format(c['host'], c['port']),
+    lambda c: ['gunicorn', '-b', c['host'] + ':' + c['port'], 'server:app'],
     {
         'FLASK_APP': FLASK_APP,
         'FLASK_DEBUG': 'false'
@@ -65,7 +65,7 @@ cm.add(Command(
 cm.add(Command(
     "run",
     "runs dev server using Flask's native debugger & backend reloader",
-    lambda c: 'python -m flask run --host={0} --port={1} --debugger --reload'.format(c['host'], c['port']),
+    lambda c: ['python', '-m', 'flask', 'run', '--host=' + c['host'], '--port=' + c['port'], '--debugger', '--reload'],
     {
         'FLASK_APP': FLASK_APP,
         'FLASK_DEBUG': 'true'
@@ -74,7 +74,7 @@ cm.add(Command(
 cm.add(Command(
     "livereload",
     "runs dev server using livereload for dynamic webpage reloading",
-    lambda c: 'python -m flask run',
+    lambda c: ['python', '-m', 'flask', 'run'],
     {
         'FLASK_APP': FLASK_APP,
         'FLASK_LIVE_RELOAD': 'true',
@@ -83,7 +83,7 @@ cm.add(Command(
 cm.add(Command(
     "debug",
     "runs dev server in debug mode; use with an IDE's remote debugger",
-    lambda c: 'python -m flask run --host={0} --port={1} --no-debugger --no-reload'.format(c['host'], c['port']),
+    lambda c: ['python', '-m', 'flask', 'run', '--host=' + c['host'], '--port=' + c['port'], '--no-debugger', '--no-reload'],
     {
         'FLASK_APP': FLASK_APP,
         'FLASK_DEBUG': 'true'
@@ -92,7 +92,7 @@ cm.add(Command(
 cm.add(Command(
     "test",
     "runs all tests inside of `tests` directory",
-    lambda c: 'python -m unittest discover -s tests -p "*.py"'))
+    lambda c: ['python', '-m', 'unittest', 'discover', '-s', 'tests', '-p', '"*.py"']))
 
 # Create and format argument parser for CLI
 parser = argparse.ArgumentParser(description=cm.availableCommands(),
