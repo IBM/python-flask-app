@@ -11,6 +11,6 @@ initServices(app)
 
 if 'FLASK_LIVE_RELOAD' in os.environ and os.environ['FLASK_LIVE_RELOAD'] == 'true':
 	import livereload
-	app.debug = True
+	app.debug = False
 	server = livereload.Server(app.wsgi_app)
 	server.serve(port=os.environ['port'], host=os.environ['host'])
