@@ -17,4 +17,7 @@ USER 1001
 
 COPY . /app
 ENV FLASK_APP=server/__init__.py
+
+EXPOSE 3000
+
 CMD ["python3", "manage.py", "start", "0.0.0.0:3000"]
