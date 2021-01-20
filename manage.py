@@ -1,9 +1,12 @@
 import os, sys, argparse, subprocess, signal
 
+# Tip from:
+# https://github.com/dpgaspar/Flask-AppBuilder/issues/733#issuecomment-379009480
+PORT = int(os.environ.get("PORT", 3000))
+
 # Project defaults
 FLASK_APP = 'server/__init__.py'
-DEFAULT_IP = '0.0.0.0:3000'
-
+DEFAULT_IP = '0.0.0.0:' + str(PORT)
 
 class Command:
     def __init__(self, name, descr, runcmd, env={}):
@@ -99,7 +102,7 @@ parser = argparse.ArgumentParser(description=cm.availableCommands(),
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument("subcommand", help="subcommand to run (see list above)")
 parser.add_argument("ipaddress", nargs='?', default=DEFAULT_IP,
-                    help="address and port to run on (i.e. {0})".format(DEFAULT_IP))
+                    help="address and port to run on (i.e. 0.0.0.0:3000)")
 
 
 def livereload_check():
