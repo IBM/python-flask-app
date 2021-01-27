@@ -56,7 +56,13 @@ Running Flask applications has been simplified with a `manage.py` file to avoid 
 pipenv install
 ```
 
-To run your application locally:
+Then, activate this app's virtualenv:
+
+```bash
+pipenv shell
+```
+
+To run your application locally, run this inside the virtualenv:
 
 ```bash
 python manage.py start
