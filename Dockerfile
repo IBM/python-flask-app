@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8
+FROM registry.access.redhat.com/ubi8:8.3
 
 WORKDIR /app
 
