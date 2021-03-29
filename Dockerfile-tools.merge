@@ -1,0 +1,24 @@
+FROM python:3.6-alpine
+
+WORKDIR /app
+
+COPY requirements.txt /tmp/requirements.txt
+RUN apk --update add python py-pip openssl ca-certificates py-openssl wget bash linux-headers
+RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-dev py-pip build-base \
+  && pip install --upgrade pip \
+  && pip install --upgrade -r /tmp/requirements.txt \
+  && apk del build-dependencies
+ENV FLASK_APP=server/__init__.py
+ENV FLASK_DEBUG=true
+
+COPY . /app
+COPY run-dev /bin
+RUN chmod 777 /bin/run-dev
+
+
+ARG bx_dev_user=root
+ARG bx_dev_userid=1000
+
+RUN BX_DEV_USER=$bx_dev_user
+RUN BX_DEV_USERID=$bx_dev_userid
+RUN if [ "$bx_dev_user" != root ]; then adduser -D -s /bin/bash -u $bx_dev_userid $bx_dev_user; fi

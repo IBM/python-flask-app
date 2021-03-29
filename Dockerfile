@@ -11,6 +11,7 @@ RUN yum -y install python3-pip wget
 
 RUN python3 -m pip install --upgrade pip \
   && python3 -m pip install --upgrade pipenv \
+  && python3 -m pip install swagger-ui-py \
   && pipenv install --system --deploy
 
 USER 1001
