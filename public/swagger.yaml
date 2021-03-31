@@ -14,7 +14,7 @@ paths:
   /health:
     get:
       operationId: get
-      description: Get health status of  
+      description: Get health status of
       responses:
         200:
           description: "Health check response"
