@@ -18,4 +18,5 @@ swagger_config = {
     "swagger_ui": True,
     "specs_route": "/swagger/api-docs/"
 }
+
 Swagger(app, template_file='../public/swagger.yaml', config=swagger_config)

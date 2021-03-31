@@ -12,4 +12,3 @@ livereload = "*"
 flask = ">=1.0.0"
 prometheus_client = "*"
 flasgger = "*"
-
