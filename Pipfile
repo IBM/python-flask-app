@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-gunicorn = "==19.7.1"
+gunicorn = "==20.1.0"
 ibmcloudenv = "*"
 livereload = "*"
 flask = ">=1.0.0"
