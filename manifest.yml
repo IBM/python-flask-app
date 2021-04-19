@@ -1,0 +1,14 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: python-flask-app
+  buildpack: python_buildpack
+  command: python manage.py start 0.0.0.0:$PORT
+  disk_quota: 1G
+  memory: 128MB
+  domain: mybluemix.net
+  host: cloudappdevs-flask
+  env:
+    FLASK_APP: server
+    FLASK_DEBUG: false
