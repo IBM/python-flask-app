@@ -4,11 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+livereload = "*"
 
 [packages]
 gunicorn = "==20.1.0"
 ibmcloudenv = "*"
-livereload = "*"
 flask = ">=1.0.0"
 prometheus_client = "*"
 flasgger = "*"
