@@ -1,19 +1,17 @@
 # Use base UBI image
-FROM registry.access.redhat.com/ubi8/ubi
+FROM registry.access.redhat.com/ubi8/python-39:1
 
-WORKDIR /app
+WORKDIR /opt/app-root/src
 
-COPY Pipfile* /app/
+COPY Pipfile* /opt/app-root/src/
 
-# Install python3
-RUN yum -y install --disableplugin=subscription-manager python36 \
-  && yum --disableplugin=subscription-manager clean all
 
-RUN yum -y install --disableplugin=subscription-manager python3-pip wget \
+RUN yum -y install --disableplugin=subscription-manager wget \
   && yum --disableplugin=subscription-manager clean all
 
 RUN pip3 install pipenv
-RUN pipenv install
+RUN pipenv install --deploy
+RUN pipenv lock -r > requirements.txt && pip3 install -r requirements.txt
 
 # Update python command to point to python3 install
 RUN alternatives --set python /usr/bin/python3
@@ -21,7 +19,7 @@ RUN alternatives --set python /usr/bin/python3
 ENV FLASK_APP=server/__init__.py
 ENV FLASK_DEBUG=true
 
-COPY . /app
+COPY . /opt/app-root/src
 COPY run-dev /bin
 RUN chmod 777 /bin/run-dev
 
