@@ -5,7 +5,7 @@ WORKDIR /opt/app-root/src
 
 COPY Pipfile* /opt/app-root/src/
 
-
+USER root
 RUN yum -y install --disableplugin=subscription-manager wget \
   && yum --disableplugin=subscription-manager clean all
 
