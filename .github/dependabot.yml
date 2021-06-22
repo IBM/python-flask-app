@@ -7,3 +7,10 @@ updates:
     target-branch: "development"
     labels:
       - "pip dependencies"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "development"
+    labels:
+      - "docker"
