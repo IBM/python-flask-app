@@ -9,8 +9,9 @@ USER root
 RUN yum -y install --disableplugin=subscription-manager wget \
   && yum --disableplugin=subscription-manager clean all
 
-RUN pip3 install pipenv
-RUN pipenv install --dev
+RUN pip3 install --upgrade pip==21.3.1 \
+  && pip3 install --upgrade pipenv==2020.11.15 \
+  && pipenv install --dev
 
 # Update python command to point to python3 install
 RUN alternatives --set python /usr/bin/python3

@@ -7,8 +7,8 @@ COPY Pipfile* /opt/app-root/src/
 ## NOTE - rhel enforces user container permissions stronger ##
 USER root
 
-RUN python3 -m pip install --upgrade pip \
-  && python3 -m pip install --upgrade pipenv \
+RUN pip3 install --upgrade pip==21.3.1 \
+  && pip3 install --upgrade pipenv==2020.11.15 \
   && pipenv install --deploy
 
 RUN pipenv lock -r > requirements.txt && pip3 install -r requirements.txt
