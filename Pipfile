@@ -3,9 +3,6 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[version]
-python_version = ">=3.9"
-
 [dev-packages]
 livereload = "*"
 
@@ -15,3 +12,4 @@ ibmcloudenv = "*"
 flask = ">=2.1.0"
 prometheus_client = "*"
 flasgger = "*"
+importlib_metadata = "*"
