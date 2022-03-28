@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [version]
-python_version = ">=3.8"
+python_version = ">=3.9"
 
 [dev-packages]
 livereload = "*"
