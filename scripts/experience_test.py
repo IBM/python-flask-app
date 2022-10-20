@@ -2,6 +2,7 @@ import os, time, sys, datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
 # Do an action on the app's landing page
 options = Options()
@@ -13,7 +14,7 @@ driver.get(os.environ["APP_URL"]); # Open a browser to the app's landing page
 time.sleep(3)
 
 # Verify the expected content is present
-title_text = driver.find_elements_by_xpath('//h1')[0].text
+title_text = driver.find_elements(By.XPATH, '//h1')[0].text
 if len(title_text) == 0:
     sys.exit("Experience Test Failed: no title texts found")
 else:
@@ -23,7 +24,7 @@ else:
     else:
         sys.exit("Experience Test Failed: unexpected subtitle text {}".format(title_text))
 
-subtitle_text = driver.find_elements_by_xpath('//h2')[0].text
+subtitle_text = driver.find_elements(By.XPATH, '//h2')[0].text
 if len(subtitle_text) == 0:
     sys.exit("Experience Test Failed: no subtitle texts found")
 else:
