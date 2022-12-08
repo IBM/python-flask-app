@@ -32,15 +32,13 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
 
 ### Deploying to IBM Cloud
 
-**Deprecated**: IBM® Cloud Foundry is deprecated. For more information, see [Deprecation of IBM Cloud Foundry](http://ibm.biz/ibmcf-announce).
-
 <p align="center">
     <a href="https://cloud.ibm.com/developer/appservice/create-app?starterKit=db553c13-0d86-3291-b523-bbcc7e610a52">
     <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
     </a>
 </p>
 
-Click **Deploy to IBM Cloud** to deploy this same application to IBM Cloud. This option creates a deployment pipeline, complete with a hosted GitLab project and a DevOps toolchain. You can deploy your app to Cloud Foundry, a Kubernetes cluster, or a Red Hat OpenShift cluster. OpenShift is available only through a standard cluster, which requires you to have a billable account.
+Click **Deploy to IBM Cloud** to deploy this same application to IBM Cloud. This option creates a deployment pipeline, complete with a hosted GitLab project and a DevOps toolchain. You can deploy your app to a Kubernetes cluster or a Red Hat OpenShift cluster. OpenShift is available only through a standard cluster, which requires you to have a billable account.
 
 [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud.
 
@@ -115,10 +113,9 @@ ibmcloud dev build
 ibmcloud dev run
 ```
 
-This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands:
+This will launch your application locally. When you are ready to deploy to IBM Cloud on Kubernetes, run one of the commands:
 
 ```bash
-ibmcloud dev deploy -t buildpack // to Cloud Foundry
 ibmcloud dev deploy -t container // to K8s cluster
 ```
 
