@@ -1,3 +1,6 @@
+# WARNING: This repository is no longer maintained :warning:
+
+> This repository will not be updated. The repository will be kept available in read-only mode.
 <p align="center">
     <a href="https://cloud.ibm.com">
         <img src="https://cloud.ibm.com/media/docs/developer-appservice/resources/ibm-cloud.svg" height="100" alt="IBM Cloud">
@@ -28,17 +31,7 @@ This application also enables a starting place for a Python microservice using F
 
 ## Steps
 
-You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/create-app?starterKit=db553c13-0d86-3291-b523-bbcc7e610a52) or [build it locally](#building-locally) by cloning this repo first. After your app is live, you can access the `/health` endpoint to build out your cloud native application.
-
 ### Deploying to IBM Cloud
-
-<p align="center">
-    <a href="https://cloud.ibm.com/developer/appservice/create-app?starterKit=db553c13-0d86-3291-b523-bbcc7e610a52">
-    <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
-    </a>
-</p>
-
-Click **Deploy to IBM Cloud** to deploy this same application to IBM Cloud. This option creates a deployment pipeline, complete with a hosted GitLab project and a DevOps toolchain. You can deploy your app to a Kubernetes cluster or a Red Hat OpenShift cluster. OpenShift is available only through a standard cluster, which requires you to have a billable account.
 
 [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud.
 
@@ -125,10 +118,6 @@ You can build and debug your app locally with:
 ibmcloud dev build --debug
 ibmcloud dev debug
 ```
-
-## Next steps
-* Learn more about the services and capabilities of [IBM Cloud](https://cloud.ibm.com).
-* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
 ## License
 
